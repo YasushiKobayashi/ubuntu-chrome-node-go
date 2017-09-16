@@ -1,0 +1,15 @@
+sudo: required
+services:
+  - docker
+
+before_script:
+  - echo 'Canada/Pacific' | sudo tee /etc/timezone
+  - sudo dpkg-reconfigure --frontend noninteractive tzdata
+  - docker pull python:3.6-jessie
+
+script:
+  - docker build .
+
+notifications:
+  slack:
+    secure: mAcVPLWoOu3DxIkR7f+8V2Hdboozhih0QmDbcGtIoaR7+TN/pasSh7MR1f5juxz4UvFNS0xVOdD5MDVu4alexhi53rzux+9Fv433rQ/3ghULMS7VRe5rh2y1DmRyHOfvya9Jifu+EhBIQ8C2C3uu31cfIJ0ivMVakL0ysEVDT/sEFl/d5oOjJ6esYutcgdilmzFsnCW3eVf5u8TAahau1pBT44oSqssWsh+ybzAuNZhRM9/IOToKE95q77IzSvSYHu7mZewg92puii/zdUdqU/K9Zn8FYMu2HFAGCHa3cQVluunmwuJcNdyIuO3bNSs2sZjm4gOu5CA08C5FMSahxESU7ToRjmhLJmKl0699+vQWRQKfbxI7JC/jDv7f/hyN2uAIKlezQVey9bUbL0H4BD1FFfTHvCgUnYXcMYdv2TkJcNM7lmRlZqw2F5B59lVeHRxUMd5qeFw8YdtCYXSVpD/OcREQJkpPCaY6luKcNHjBlaVuIHZNs6ZmJZMd2xDDZiztzqGiSB/f/PqSCM7JKRhPlupgBwbpwqZ7zS2SPXj14r16v2FgMHNYZ49VPAgbvWoxUDj9iv8qsKhY9HBUyhE2zr0zPLku7W0eF5XnGmsZ2hcplj/iEXbiWkmFMBAAS+AOKXVW7HzRYzdU0pH2uymuaOwsRoP1u4T7Kxvi0FY=
