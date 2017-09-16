@@ -3,10 +3,9 @@ MAINTAINER Yasushi Kobayashi <ptpadan@gmail.com>
 
 ENV LANG ja_JP.UTF-8
 ENV LANGUAGE ja_JP:ja
-ENV LC_ALL ja_JP.UTF-8
 
 RUN apt-get update && \
-  apt-get install -y curl wget git language-pack-ja
+  apt-get install -y curl wget git
 
 # setup chrome
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
