@@ -1,12 +1,7 @@
-[![CircleCI](https://circleci.com/gh/YasushiKobayashi/docker-lamp/tree/master.svg?style=svg&circle-token=cb90b5cec40592a5eb996da7bd5f85e70c5846ee)](https://circleci.com/gh/YasushiKobayashi/docker-lamp)
-[![Build Status](https://travis-ci.org/YasushiKobayashi/docker-lamp.svg?branch=master)](https://travis-ci.org/YasushiKobayashi/docker-lamp)
-
-- base image is centos:6
-- setup LAMP
-- php7
-  - composer
-- mysql5.6
+[![CircleCI](https://circleci.com/gh/YasushiKobayashi/ubuntu-chrome-node-go.svg?style=svg)](https://circleci.com/gh/YasushiKobayashi/ubuntu-chrome-node-go)
+[![Build Status](https://travis-ci.org/YasushiKobayashi/ubuntu-chrome-node-go.svg?branch=master)](https://travis-ci.org/YasushiKobayashi/ubuntu-chrome-node-go)
+- base image is python:3.6-jessie
+- golang
 - nodejs
-- redis
-- `docker pull ptpadan1246/lamp`
-- https://hub.docker.com/r/ptpadan1246/lamp/
+- python selenium
+- chrome
