@@ -2,7 +2,7 @@ FROM python:3.6-jessie
 MAINTAINER Yasushi Kobayashi <ptpadan@gmail.com>
 
 RUN apt-get update && \
-  apt-get install -y curl wget
+  apt-get install -y curl wget git
 
 # setup chrome
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
