@@ -25,7 +25,7 @@ RUN npm i -g yarn
 # setup golang glide
 WORKDIR /usr/local
 ENV PATH=$PATH:/usr/local/go/bin
-ENV GOPATH=$HOME/go
+ENV GOPATH=$HOME/work/go
 ENV PATH=$PATH:$GOPATH/bin
 RUN wget https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz && \
   tar -zxvf go1.8.3.linux-amd64.tar.gz && \
