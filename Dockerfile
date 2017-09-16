@@ -1,6 +1,10 @@
 FROM python:3.6-jessie
 MAINTAINER Yasushi Kobayashi <ptpadan@gmail.com>
 
+ENV LANG ja_JP.UTF-8
+ENV LANGUAGE ja_JP:ja
+ENV LC_ALL ja_JP.UTF-8
+
 RUN apt-get update && \
   apt-get install -y curl wget git
 
@@ -31,7 +35,3 @@ RUN wget https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz && \
 
 # setup python selenium
 RUN pip install selenium
-
-ENV LANG ja_JP.UTF-8
-ENV LANGUAGE ja_JP:ja
-ENV LC_ALL ja_JP.UTF-8
