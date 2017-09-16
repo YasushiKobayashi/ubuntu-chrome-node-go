@@ -17,7 +17,7 @@ ENV PATH=/usr/local/node-${NODE_V}-linux-x64/bin:$PATH
 WORKDIR /usr/local
 RUN wget https://nodejs.org/download/release/${NODE_V}/node-${NODE_V}-linux-x64.tar.gz && \
   tar -zxvf node-${NODE_V}-linux-x64.tar.gz
-RUN node -v && npm -v
+RUN npm i -g yarn
 
 # setup golang glide
 WORKDIR /usr/local
