@@ -19,7 +19,6 @@ RUN wget https://nodejs.org/download/release/${NODE_V}/node-${NODE_V}-linux-x64.
   tar -zxvf node-${NODE_V}-linux-x64.tar.gz
 RUN node -v && npm -v
 
-
 # setup golang glide
 WORKDIR /usr/local
 ENV PATH=$PATH:/usr/local/go/bin
