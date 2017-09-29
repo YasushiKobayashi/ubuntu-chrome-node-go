@@ -39,6 +39,12 @@ RUN curl -O https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_V}/chrome
   ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver && \
   ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
 
+# setup japanese
+RUN wget https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted.zip && \
+  mkdir /usr/share/fonts/noto && \
+  unzip NotoSansCJKjp-hinted.zip NotoSansCJKjp-Regular.otf NotoSansCJKjp-Bold.otf -d /usr/share/fonts/noto/ && \
+  fc-cache -v
+
 ENV LANG ja_JP.UTF-8
 ENV LANGUAGE ja_JP:ja
 # ENV LC_ALL ja_JP.UTF-8
