@@ -14,7 +14,7 @@ RUN npm i -g yarn
 
 # setup golang glide
 WORKDIR /usr/local
-ENV GO_V=1.8.3
+ENV GO_V=1.9.1
 ENV PATH=$PATH:/usr/local/go/bin
 ENV GOPATH=/work/go
 ENV PATH=$PATH:$GOPATH/bin
@@ -44,13 +44,14 @@ RUN wget https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKjp-hinted
 
 # setup python
 WORKDIR /root/
-RUN wget https://www.python.org/ftp/python/3.6.0/Python-3.6.0.tgz \
-  && tar zxf Python-3.6.0.tgz \
-  && cd Python-3.6.0 \
-  && ./configure \
-  && make altinstall
+RUN wget https://www.python.org/ftp/python/3.6.0/Python-3.6.0.tgz && \
+  tar zxf Python-3.6.0.tgz && \
+  cd Python-3.6.0 && \
+  ./configure && \
+  make altinstall
 ENV PYTHONIOENCODING "utf-8"
-RUN pip3.6 install selenium
+RUN pip3.6 install selenium && \
+  pip3.6 install faker
 
 # setup lang ja
 RUN apt-get update && \
