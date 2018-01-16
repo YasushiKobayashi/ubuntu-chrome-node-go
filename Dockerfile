@@ -29,7 +29,7 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
 
 # install chromedriver
 WORKDIR /usr/local/share
-ENV CHROMEDRIVER_V=2.32
+ENV CHROMEDRIVER_V=2.35
 RUN curl -O https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_V}/chromedriver_linux64.zip && \
   unzip chromedriver_linux64.zip && \
   chmod +x chromedriver && \
