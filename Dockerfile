@@ -14,7 +14,7 @@ RUN npm i -g yarn
 
 # setup golang glide
 WORKDIR /usr/local
-ENV GO_V=1.9.1
+ENV GO_V=1.10
 ENV PATH=$PATH:/usr/local/go/bin
 ENV GOPATH=/work/go
 ENV PATH=$PATH:$GOPATH/bin
