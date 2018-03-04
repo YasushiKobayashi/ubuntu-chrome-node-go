@@ -19,7 +19,7 @@ ENV PATH=$PATH:/usr/local/go/bin
 ENV GOPATH=/work/go
 ENV PATH=$PATH:$GOPATH/bin
 RUN wget https://github.com/golang/go/archive/go${GO_V}.tar.gz && \
-  tar -zxvf go${GO_V}.linux-amd64.tar.gz
+  tar -zxvf go${GO_V}.tar.gz
 
 # Install Chrome for Ubuntu
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
