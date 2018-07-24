@@ -4,4 +4,3 @@
 - golang
 - nodejs
 - python selenium
-- chrome
